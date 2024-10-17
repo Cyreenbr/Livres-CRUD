@@ -1,18 +1,16 @@
 import mongoose, { Types } from "mongoose";
 
 const livreShema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
-    required: true,
-  },
-  price: {
-    type: Number,
     required: true,
   },
   author: {
     type: String,
     required: true,
   },
+  publishedYear: Number,
+  genre: String,
 });
 
 export default mongoose.model("Livre", livreShema);
